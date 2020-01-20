@@ -1,4 +1,5 @@
 # vue-crash-course
+https://youtu.be/OlnwgS-gk8Y
 
 ## Project setup
 ```

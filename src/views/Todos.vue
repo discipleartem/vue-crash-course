@@ -1,13 +1,16 @@
 <template>
-  <div id="app">
-    <h1>ToDo aplication</h1>
+  <div>
+    <h2>ToDo aplication</h2>
+    <AddTodo
+      @add-todo="addTodo"
+    />
     <hr>
-
-    
-    <router-view />
+    <TodoList
+      v-bind:todos="todos"
+      @remove-todo="removeTodo"
+    />
   </div>
 </template>
-
 
 <script>
 import TodoList from '@/components/TodoList'
@@ -39,17 +42,3 @@ export default {
   }
 }
 </script>
-
-
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
-
